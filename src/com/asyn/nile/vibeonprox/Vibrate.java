@@ -1,5 +1,6 @@
 package com.asyn.nile.vibeonprox;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.os.Vibrator;
 
@@ -13,8 +14,10 @@ public class Vibrate {
 		vibrator = (Vibrator) context.getSystemService(Context.VIBRATOR_SERVICE);
 	}
 	
+	@SuppressLint("NewApi")
 	public void startVibration() {
-		vibrator.vibrate(VIB_TIME);
+		if(vibrator.hasVibrator())
+			vibrator.vibrate(VIB_TIME);
 	}
 	
 	public void stopVibration() {

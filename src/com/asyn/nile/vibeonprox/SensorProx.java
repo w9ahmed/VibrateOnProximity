@@ -43,6 +43,7 @@ public class SensorProx implements SensorEventListener {
 	
 	public void pauseSensor() {
 		mSensorManager.unregisterListener(this);
+		vibrate.stopVibration();
 	}
 	
 	public void resumeSensor() {
