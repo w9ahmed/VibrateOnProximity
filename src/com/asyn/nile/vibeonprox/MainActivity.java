@@ -7,11 +7,14 @@ import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
+import android.widget.ToggleButton;
 
 public class MainActivity extends ActionBarActivity {
 	
 	private SensorProx sensorProx;
 	private TextView proxText;
+	private ToggleButton vibrate;
+	private ToggleButton hornFX;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -19,7 +22,11 @@ public class MainActivity extends ActionBarActivity {
 		setContentView(R.layout.activity_main);
 		
 		proxText = (TextView) findViewById(R.id.proxVal);
+		vibrate = (ToggleButton) findViewById(R.id.vibrateButton);
+		hornFX = (ToggleButton) findViewById(R.id.hornButton);
+		
 		sensorProx = new SensorProx(this, proxText);
+		sensorProx.setToggleButtons(vibrate, hornFX);
 	}
 	
 	

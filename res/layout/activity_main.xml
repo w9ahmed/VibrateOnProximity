@@ -17,4 +17,39 @@
         android:text="@string/approach" 
         android:textSize="50sp"/>
 
+    <ToggleButton
+        android:id="@+id/vibrateButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:text="@string/vibration" />
+
+    <ToggleButton
+        android:id="@+id/hornButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:text="@string/car_horn" />
+
+    <TextView
+        android:id="@+id/vibelabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/vibrateButton"
+        android:layout_alignLeft="@+id/vibrateButton"
+        android:text="@string/vibration"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/hornlabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/hornButton"
+        android:layout_alignLeft="@+id/hornButton"
+        android:layout_marginLeft="16dp"
+        android:text="@string/car_horn"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
 </RelativeLayout>
