@@ -16,7 +16,6 @@ public class MediaEngine {
 	}
 	
 	public void play() {
-		reinstate();
 		mediaPlayer.start();
 	}
 	
@@ -24,6 +23,7 @@ public class MediaEngine {
 		if(mediaPlayer.isPlaying()) {
 			mediaPlayer.stop();
 			destroy();
+			reinstate();
 		}
 	}
 	

@@ -48,8 +48,7 @@ public class SensorProx implements SensorEventListener {
 		} else {
 			displayer.setText(FAR);
 			vibrate.stopVibration();
-			if(hornFXButton.isChecked())
-				media.stop();
+			media.stop();
 		}
 	}
 
